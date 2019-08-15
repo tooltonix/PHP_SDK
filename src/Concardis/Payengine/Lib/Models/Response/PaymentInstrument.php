@@ -3,10 +3,15 @@
 namespace Concardis\Payengine\Lib\Models\Response;
 
 use Concardis\Payengine\Lib\Internal\AbstractClass\AbstractResponseModel;
-
+use Concardis\Payengine\Lib\Models\Response\PaymentInstrument\Attributes;
 
 class PaymentInstrument extends AbstractResponseModel
 {
+    const CLASSNAME = __CLASS__;
+
+    protected $subModels = [
+        'attributes' => Attributes::CLASSNAME,
+    ];
 
     /**
      * @var string
@@ -33,7 +38,7 @@ class PaymentInstrument extends AbstractResponseModel
      */
     private $attributes;
 
-    /**
+	/**
      * @var  string
      */
     private $origin;
@@ -44,9 +49,9 @@ class PaymentInstrument extends AbstractResponseModel
     private $type;
 
     /**
-     * @return string
-     */
-    public function getPaymentInstrumentId()
+	 * @return string
+	 */
+	public function getPaymentInstrumentId()
     {
         return $this->paymentInstrumentId;
     }
@@ -108,7 +113,7 @@ class PaymentInstrument extends AbstractResponseModel
     }
 
     /**
-     * @return array
+     * @return Attributes
      */
     public function getAttributes()
     {
@@ -116,7 +121,7 @@ class PaymentInstrument extends AbstractResponseModel
     }
 
     /**
-     * @param array $attributes
+     * @param Attributes $attributes
      */
     public function setAttributes($attributes)
     {
@@ -154,5 +159,4 @@ class PaymentInstrument extends AbstractResponseModel
     {
         $this->type = $type;
     }
-
 }
