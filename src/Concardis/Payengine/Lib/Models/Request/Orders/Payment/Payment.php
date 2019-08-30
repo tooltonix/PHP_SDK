@@ -183,11 +183,18 @@ class Payment extends AbstractModel {
 	public function setMandate($mandate) {
 		$this->mandate = $mandate;
 	}
-
+	
+	/**
+	 * @return \Concardis\Payengine\Lib\Models\Request\Orders\CredentialOnFile
+	 */
+	public function getCofContract() {
+		return $this->cofContract;
+	}
+	
 	/**
 	 * @param \Concardis\Payengine\Lib\Models\Request\Orders\CredentialOnFile $cofContract
 	 */
-	public function setCredentialOnFile($cofContract) {
+	public function setCofContract($cofContract) {
 		$this->cofContract = $cofContract;
 	}
 
