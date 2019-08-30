@@ -15,7 +15,7 @@ class ThreeDsVersionSpecificData extends AbstractResponseModel
     private $methodUrl;
 
     /**
-     * @var int
+     * @var string
      */
     private $base64EncodedThreeDsMethodData;
 
@@ -34,7 +34,7 @@ class ThreeDsVersionSpecificData extends AbstractResponseModel
 	}
 
 	/**
-	 * @return int
+	 * @return string
 	 */
 	public function getBase64EncodedThreeDsMethodData() {
 		return $this->base64EncodedThreeDsMethodData;
