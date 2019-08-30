@@ -13,7 +13,7 @@ class BrowserInfos extends AbstractResource implements Postable
      * @param $data \Concardis\Payengine\Lib\Models\Request\BrowserInfo
      * @return \Concardis\Payengine\Lib\Models\Response\BrowserInfo
      */
-    public function post(\Concardis\Payengine\Lib\Models\Request\BrowserInfo $data)
+    public function post($data)
     {
         $result = parent::post($data);
         return $result;
