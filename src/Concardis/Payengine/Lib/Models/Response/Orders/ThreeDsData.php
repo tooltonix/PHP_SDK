@@ -10,7 +10,7 @@ class ThreeDsData extends AbstractResponseModel
 	const CLASSNAME = __CLASS__;
 
     protected $subModels = array(
-        'authenticationresult' => AuthenticationResult::CLASSNAME
+        'authenticationResult' => AuthenticationResult::CLASSNAME
     );
 
     /**
