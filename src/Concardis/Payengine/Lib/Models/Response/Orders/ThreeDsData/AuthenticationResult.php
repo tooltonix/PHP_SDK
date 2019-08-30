@@ -11,8 +11,8 @@ class AuthenticationResult extends AbstractResponseModel
 	const CLASSNAME = __CLASS__;
 
 	protected $subModels = array(
-		'challengedata' => ChallengeData::CLASSNAME,
-		'errordetails' => ErrorDetails::CLASSNAME
+		'challengeData' => ChallengeData::CLASSNAME,
+		'errorDetails' => ErrorDetails::CLASSNAME
 	);
 
     /**
