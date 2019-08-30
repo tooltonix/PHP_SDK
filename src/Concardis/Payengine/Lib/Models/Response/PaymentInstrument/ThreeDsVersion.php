@@ -9,35 +9,35 @@ class ThreeDsVersion extends AbstractResponseModel
 {
 	const CLASSNAME = __CLASS__;
 
-    protected $subModels = array(
-        'threedsversionspecificdata' => ThreeDsVersionSpecificData::CLASSNAME
-    );
+	protected $subModels = array(
+	'specificData' => ThreeDsVersionSpecificData::CLASSNAME
+	);
 
-    /**
-     * @var string
-     */
-    private $id;
+	/**
+	* @var string
+	*/
+	protected $id;
 
-    /**
-     * @var int
-     */
-    private $createdAt;
+	/**
+	* @var int
+	*/
+	protected $createdAt;
 
-    /**
-     * @var int
-     */
-    private $modifiedAt;
+	/**
+	* @var int
+	*/
+	protected $modifiedAt;
 
-    /**
-     * @var string
-     */
-    private $version;
+	/**
+	* @var string
+	*/
+	protected $version;
 
-    /**
-     * @var ThreeDsVersionSpecificData
-     *                    
-     */
-    private $specificData;
+	/**
+	* @var ThreeDsVersionSpecificData
+	*                    
+	*/
+	protected $specificData;
 
 	/**
 	 * @return string
