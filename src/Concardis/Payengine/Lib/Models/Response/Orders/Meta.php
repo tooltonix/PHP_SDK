@@ -10,7 +10,7 @@ class Meta extends AbstractResponseModel {
 
 	protected $subModels = [
 		'cofContract' => CredentialOnFile::CLASSNAME,
-		'threedsdata' => ThreeDsData::CLASSNAME,
+		'threeDsData' => ThreeDsData::CLASSNAME,
 	];
 
 	/**
