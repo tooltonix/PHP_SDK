@@ -4,6 +4,7 @@ namespace Concardis\Payengine\Lib\Models\Request\Orders;
 use Concardis\Payengine\Lib\Models\Request\Orders\Risk\RiskCustomerAccount;
 use Concardis\Payengine\Lib\Models\Request\Orders\Risk\RiskOrderInfo;
 use Concardis\Payengine\Lib\Models\Request\Orders\Risk\RiskShippingInfo;
+use Concardis\Payengine\Lib\Internal\AbstractClass\AbstractModel;
 
 class Risk extends AbstractModel
 {
