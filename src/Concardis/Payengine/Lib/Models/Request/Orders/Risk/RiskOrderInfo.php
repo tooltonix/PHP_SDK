@@ -2,6 +2,8 @@
 
 namespace Concardis\Payengine\Lib\Models\Request\Orders\Risk;
 
+use Concardis\Payengine\Lib\Internal\AbstractClass\AbstractModel;
+
 class RiskOrderInfo extends AbstractModel {
 
 	/**
