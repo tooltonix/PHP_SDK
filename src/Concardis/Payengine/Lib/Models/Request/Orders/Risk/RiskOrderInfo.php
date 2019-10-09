@@ -29,8 +29,8 @@ class RiskOrderInfo extends AbstractModel {
 	/**
 	 * @return bool
 	 */
-	public function isReorder() {
-		return $this->isReorder;
+	public function getIsReorder() {
+		return (bool)$this->isReorder;
 	}
 
 	/**
