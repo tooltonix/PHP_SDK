@@ -215,16 +215,16 @@ Move the PHP SDK folder into the vendor folder of your PHP project. Now you can 
 ### Register (tokenize) credit card
 ~~~php
     $payInstrument = new PaymentInstrumentRequest();
-	$payInstrument->setCardNumber('4200000000000000');
-	$payInstrument->setCardHolder('John Doe');
-	$payInstrument->setVerification('123');
-	$payInstrument->setExpiryMonth('12');
-	$payInstrument->setExpiryYear('20');
+    $payInstrument->setCardNumber('4200000000000000');
+    $payInstrument->setCardHolder('John Doe');
+    $payInstrument->setVerification('123');
+    $payInstrument->setExpiryMonth('12');
+    $payInstrument->setExpiryYear('20');
     
-	$tokenizePayInstrumentRequest = new TokenizePaymentInstrumentRequest();
+    $tokenizePayInstrumentRequest = new TokenizePaymentInstrumentRequest();
     $tokenizePayInstrumentRequest->setType('creditcard');
-	$tokenizePayInstrumentRequest->setMerchantPaymentInstrumentId('yourId');
-	$tokenizePayInstrumentRequest->setPayment($payInstrument);
+    $tokenizePayInstrumentRequest->setMerchantPaymentInstrumentId('yourId');
+    $tokenizePayInstrumentRequest->setPayment($payInstrument);
     
     $lib->paymentinstruments()->post($tokenizePayInstrumentRequest);
 ~~~
@@ -233,10 +233,10 @@ Move the PHP SDK folder into the vendor folder of your PHP project. Now you can 
 ~~~php
     $payInstrumentId = 'payinstrument_123456';
     $payInstrument = new PaymentInstrumentRequest();
-	$payInstrument->setCardHolder('John Doe');
-	$payInstrument->setVerification('123');
-	$payInstrument->setExpiryMonth('12');
-	$payInstrument->setExpiryYear('20');
+    $payInstrument->setCardHolder('John Doe');
+    $payInstrument->setVerification('123');
+    $payInstrument->setExpiryMonth('12');
+    $payInstrument->setExpiryYear('20');
        
     $lib->paymentinstruments($payInstrumentId)->patch($payInstrument);
 ~~~
@@ -251,15 +251,15 @@ Move the PHP SDK folder into the vendor folder of your PHP project. Now you can 
 ~~~php   
     $browserInfo = new BrowserInfo();
     $browserInfo->setIp('...');
-	$browserInfo->setAcceptHeader('...');
-	$browserInfo->setJavaEnabled(false);
-	$browserInfo->setLanguage('...');  // TODO: need to truncate: db field at concardis too short ?
-	$browserInfo->setColorDepth('...');
-	$browserInfo->setScreenHeight('...');
-	$browserInfo->setScreenWidth('...');
-	$browserInfo->setTimezone('...');
-	$browserInfo->setUserAgent('...');
-	$browserInfo->setWindowSize('...');
+    $browserInfo->setAcceptHeader('...');
+    $browserInfo->setJavaEnabled(false);
+    $browserInfo->setLanguage('...');  // TODO: need to truncate: db field at concardis too short ?
+    $browserInfo->setColorDepth('...');
+    $browserInfo->setScreenHeight('...');
+    $browserInfo->setScreenWidth('...');
+    $browserInfo->setTimezone('...');
+    $browserInfo->setUserAgent('...');
+    $browserInfo->setWindowSize('...');
     $lib->browserinfos()->post($browserInfo);
 ~~~
 
@@ -291,7 +291,9 @@ Move the PHP SDK folder into the vendor folder of your PHP project. Now you can 
     $async->setNotificationUrl('...');
     $authenticationRequest->setAsync($async);
 
-    $lib->paymentinstruments($payInstrumentId)->threedsversion()->threedsauthentication($threeDsVersionId)->post($authenticationRequest);
+    $lib->paymentinstruments($payInstrumentId)->threedsversion()->threedsauthentication(
+    	$threeDsVersionId
+    )->post($authenticationRequest);
 ~~~
 
 ### Get Authentication Result
@@ -307,16 +309,16 @@ Move the PHP SDK folder into the vendor folder of your PHP project. Now you can 
     $authenticationTransactionId = '123456-123456';
     
     $cardCheckRequest = new CardCheckRequest();
-	$threeDsData = new ThreeDsData();
-	$threeDsData->setThreeDsAuthenticationId($authenticationId);
-	$threeDsData->setTransactionId($authenticationTransactionId);
-	$threeDsData->setAuthenticationValue('...');
-	$cardCheckRequest->setThreeDsData($threeDsData);
+    $threeDsData = new ThreeDsData();
+    $threeDsData->setThreeDsAuthenticationId($authenticationId);
+    $threeDsData->setTransactionId($authenticationTransactionId);
+    $threeDsData->setAuthenticationValue('...');
+    $cardCheckRequest->setThreeDsData($threeDsData);
 
-	$cof = new CredentialOnFileRequest();
-	$cof->setType('UNSCHEDULED');
-	$cof->setChannel('ECOM');
-	$cardCheckRequest->setCofContract($cof);
+    $cof = new CredentialOnFileRequest();
+    $cof->setType('UNSCHEDULED');
+    $cof->setChannel('ECOM');
+    $cardCheckRequest->setCofContract($cof);
 
     $lib->paymentinstruments($payInstrumentId)->cardcheck()->post($cardCheckRequest);
 ~~~
