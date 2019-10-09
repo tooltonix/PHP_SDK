@@ -25,4 +25,7 @@ class Api
     const RESOURCE_PAYMENTINSTRUMENT_3DSVERSION = "/3ds-version";
 
     const RESOURCE_BROWSER_INFO = "/browser-info";
+    
+    const RESOURCE_CREDITCARD = "/creditcard";
+    const RESOURCE_CREDITCARD_3DSAUTHENTICATION = "/3ds-authentication";
 }
