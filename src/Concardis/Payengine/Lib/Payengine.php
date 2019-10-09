@@ -6,6 +6,7 @@ use Concardis\Payengine\Lib\Internal\Config\MerchantConfiguration;
 use Concardis\Payengine\Lib\Internal\Connection\Connection;
 use Concardis\Payengine\Lib\Internal\Connection\ConnectionInterface;
 use Concardis\Payengine\Lib\Internal\Resource\BrowserInfos;
+use Concardis\Payengine\Lib\Internal\Resource\Creditcards;
 use Concardis\Payengine\Lib\Internal\Resource\Customers;
 use Concardis\Payengine\Lib\Internal\Resource\PaymentInstruments;
 use Concardis\Payengine\Lib\Internal\Resource\Orders;
@@ -82,5 +83,12 @@ class Payengine {
 	 */
 	public function browserinfos() {
 		return new BrowserInfos($this->connection, null, null);
+	}
+
+	/**
+	 * @return Creditcards
+	 */
+	public function creditcards() {
+		return new Creditcards($this->connection, null, null);
 	}
 }
