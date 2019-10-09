@@ -24,7 +24,7 @@ class Api
     const RESOURCE_PAYMENTINSTRUMENT = "/payment-instruments";
     const RESOURCE_PAYMENTINSTRUMENT_3DSVERSION = "/3ds-version";
     const RESOURCE_PAYMENTINSTRUMENT_CARD_CHECK = "/card-check";
-	const RESOURCE_PAYMENTINSTRUMENT_3DSAUTHENTICATION = "/3ds-authentication";
+    const RESOURCE_PAYMENTINSTRUMENT_3DSAUTHENTICATION = "/3ds-authentication";
 
     const RESOURCE_BROWSER_INFO = "/browser-info";
     
