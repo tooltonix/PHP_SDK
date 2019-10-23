@@ -18,7 +18,7 @@ class Authentications extends AbstractResource implements Getable
 	 * A list of Transactions if $queryParams provided or one Transaction
 	 * if called with ID set, if transactionId is set $queryParams will be ignored.
 	 */
-	public function get($queryParams = null)
+	public function get($queryParams = [])
 	{
 		return parent::get($queryParams);
 	}
