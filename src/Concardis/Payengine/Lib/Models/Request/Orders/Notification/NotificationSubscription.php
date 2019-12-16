@@ -12,6 +12,34 @@ class NotificationSubscription extends AbstractOrder {
 	const NOTIFICATION_STATE_CREATED = 'CREATED';
 	const NOTIFICATION_STATE_UPDATED = 'UPDATED';
 
+	// v1 types
+	const NOTIFICATION_TYPE_TRANSACTION_CREATE_SUCCESS                = 'transaction.create.success';
+	const NOTIFICATION_TYPE_TRANSACTION_CREATE_FAILURE                = 'transaction.create.failure';
+	const NOTIFICATION_TYPE_TRANSACTION_UPDATE_SUCCESS                = 'transaction.update.success';
+	const NOTIFICATION_TYPE_TRANSACTION_UPDATE_FAILURE                = 'transaction.update.failure';
+	const NOTIFICATION_TYPE_CUSTOMER_UPDATE_SUCCESS                   = 'customer.update.success';
+	const NOTIFICATION_TYPE_CUSTOMER_UPDATE_FAILURE                   = 'customer.update.failure';
+	const NOTIFICATION_TYPE_CUSTOMER_PERSONA_CREATE_SUCCESS           = 'customer.persona.create.success';
+	const NOTIFICATION_TYPE_CUSTOMER_PERSONA_CREATE_FAILURE           = 'customer.persona.create.failure';
+	const NOTIFICATION_TYPE_CUSTOMER_PERSONA_DUPLICATE_SUCCESS        = 'customer.persona.duplicate.success';
+	const NOTIFICATION_TYPE_CUSTOMER_PAYMENTINSTRUMENT_ADD_SUCCESS    = 'customer.paymentInstrument.add.success';
+	const NOTIFICATION_TYPE_CUSTOMER_PAYMENTINSTRUMENT_ADD_FAILURE    = 'customer.paymentInstrument.add.failure';
+	const NOTIFICATION_TYPE_CUSTOMER_PAYMENTINSTRUMENT_DELETE_SUCCESS = 'customer.paymentInstrument.delete.success';
+	const NOTIFICATION_TYPE_CUSTOMER_PAYMENTINSTRUMENT_DELETE_FAILURE = 'customer.paymentInstrument.delete.failure';
+	const NOTIFICATION_TYPE_CUSTOMER_ADDRESS_CREATE_SUCCESS           = 'customer.address.create.success';
+	const NOTIFICATION_TYPE_CUSTOMER_ADDRESS_CREATE_FAILURE           = 'customer.address.create.failure';
+	const NOTIFICATION_TYPE_CUSTOMER_ADDRESS_DUPLICATE_SUCCESS        = 'customer.address.duplicate.success';
+	const NOTIFICATION_TYPE_CUSTOMER_CREATE_SUCCESS                   = 'customer.create.success';
+	const NOTIFICATION_TYPE_CUSTOMER_CREATE_FAILURE                   = 'customer.create.failure';
+	const NOTIFICATION_TYPE_PAYMENTINSTRUMENT_CREATE_SUCCESS          = 'paymentInstrument.create.success';
+	const NOTIFICATION_TYPE_PAYMENTINSTRUMENT_CREATE_FAILURE          = 'paymentInstrument.create.failure';
+	const NOTIFICATION_TYPE_PAYMENTINSTRUMENT_EXPIRES                 = 'paymentInstrument.expires';
+	const NOTIFICATION_TYPE_ORDER_CREATE_SUCCESS                      = 'order.create.success';
+	const NOTIFICATION_TYPE_ORDER_CREATE_FAILURE                      = 'order.create.failure';
+	const NOTIFICATION_TYPE_ORDER_UPDATE_SUCCESS                      = 'order.update.success';
+	const NOTIFICATION_TYPE_ORDER_UPDATE_FAILURE                      = 'order.update.failure';
+
+	// v2 types
 	const NOTIFICATION_TYPE_PREAUTH_PENDING   = 'trx.preauth.pending';
 	const NOTIFICATION_TYPE_PREAUTH_SUCCESS   = 'trx.preauth.success';
 	const NOTIFICATION_TYPE_PREAUTH_FAILURE   = 'trx.preauth.failure';
