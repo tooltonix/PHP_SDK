@@ -3,7 +3,6 @@
 namespace Concardis\Payengine\Lib\Models\Response;
 
 use Concardis\Payengine\Lib\Internal\AbstractClass\AbstractResponseModel;
-use Concardis\Payengine\Lib\Models\Response\PaymentInstrument\Attributes;
 
 class PaymentInstrument extends AbstractResponseModel
 {
