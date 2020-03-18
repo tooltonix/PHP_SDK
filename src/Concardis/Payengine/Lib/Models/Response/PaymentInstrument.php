@@ -9,10 +9,6 @@ class PaymentInstrument extends AbstractResponseModel
 {
     const CLASSNAME = __CLASS__;
 
-    protected $subModels = [
-        'attributes' => Attributes::CLASSNAME,
-    ];
-
     /**
      * @var string
      */
@@ -113,7 +109,7 @@ class PaymentInstrument extends AbstractResponseModel
     }
 
     /**
-     * @return Attributes
+     * @return array
      */
     public function getAttributes()
     {
@@ -121,7 +117,7 @@ class PaymentInstrument extends AbstractResponseModel
     }
 
     /**
-     * @param Attributes $attributes
+     * @param array $attributes
      */
     public function setAttributes($attributes)
     {
