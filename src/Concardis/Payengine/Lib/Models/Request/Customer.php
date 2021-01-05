@@ -36,6 +36,13 @@ class Customer extends AbstractModel
     private $customerType;
 
     /**
+     * optional for b2b: unique VAT ID number of the organization
+     *
+     * @var string
+     */
+    private $organizationVatId;
+
+    /**
      * @return string
      */
     public function getEmail()
@@ -99,4 +106,19 @@ class Customer extends AbstractModel
         $this->customerType = $customerType;
     }
 
+    /**
+     * @return string
+     */
+    public function getOrganizationVatId(): string
+    {
+        return $this->organizationVatId;
+    }
+
+    /**
+     * @param string $organizationVatId
+     */
+    public function setOrganizationVatId(string $organizationVatId): void
+    {
+        $this->organizationVatId = $organizationVatId;
+    }
 }
