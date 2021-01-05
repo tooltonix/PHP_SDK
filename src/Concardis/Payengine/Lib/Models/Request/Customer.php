@@ -9,15 +9,31 @@ class Customer extends AbstractModel
 {
     /**
      * Email of the customer
+     *
      * @var string
      */
     private $email;
 
     /**
      * Id for this customer on your System
+     *
      * @var string
      */
     private $merchantCustomerId;
+
+    /**
+     * required for b2b: official name of the organization
+     *
+     * @var string
+     */
+    private $companyName;
+
+    /**
+     * required for b2b: when customer is an organization, this parameter has one possible value: 'organization'
+     *
+     * @var string
+     */
+    private $customerType;
 
     /**
      * @return string
@@ -49,6 +65,38 @@ class Customer extends AbstractModel
     public function setMerchantCustomerId($merchantCustomerId)
     {
         $this->merchantCustomerId = $merchantCustomerId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCompanyName(): string
+    {
+        return $this->companyName;
+    }
+
+    /**
+     * @param string $companyName
+     */
+    public function setCompanyName(string $companyName): void
+    {
+        $this->companyName = $companyName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCustomerType(): string
+    {
+        return $this->customerType;
+    }
+
+    /**
+     * @param string $customerType
+     */
+    public function setCustomerType(string $customerType): void
+    {
+        $this->customerType = $customerType;
     }
 
 }
