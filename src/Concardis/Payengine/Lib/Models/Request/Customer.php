@@ -2,7 +2,6 @@
 
 namespace Concardis\Payengine\Lib\Models\Request;
 
-
 use Concardis\Payengine\Lib\Internal\AbstractClass\AbstractModel;
 
 class Customer extends AbstractModel
