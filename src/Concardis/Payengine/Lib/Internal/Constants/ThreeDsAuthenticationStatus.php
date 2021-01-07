@@ -2,7 +2,6 @@
 
 namespace Concardis\Payengine\Lib\Internal\Constants;
 
-
 /**
  * Indicates whether a transaction qualifies as an authenticated transaction or account verification.
  *

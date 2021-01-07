@@ -45,7 +45,7 @@ class Customer extends AbstractModel
     /**
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail()
     {
         return $this->email;
     }
@@ -53,7 +53,7 @@ class Customer extends AbstractModel
     /**
      * @param string $email
      */
-    public function setEmail(string $email): void
+    public function setEmail($email)
     {
         $this->email = $email;
     }
@@ -61,7 +61,7 @@ class Customer extends AbstractModel
     /**
      * @return string
      */
-    public function getMerchantCustomerId(): string
+    public function getMerchantCustomerId()
     {
         return $this->merchantCustomerId;
     }
@@ -69,7 +69,7 @@ class Customer extends AbstractModel
     /**
      * @param string $merchantCustomerId
      */
-    public function setMerchantCustomerId(string $merchantCustomerId): void
+    public function setMerchantCustomerId($merchantCustomerId)
     {
         $this->merchantCustomerId = $merchantCustomerId;
     }
@@ -77,7 +77,7 @@ class Customer extends AbstractModel
     /**
      * @return string|null
      */
-    public function getCompanyName(): ?string
+    public function getCompanyName()
     {
         return $this->companyName;
     }
@@ -85,7 +85,7 @@ class Customer extends AbstractModel
     /**
      * @param string|null $companyName
      */
-    public function setCompanyName(?string $companyName): void
+    public function setCompanyName($companyName)
     {
         $this->companyName = $companyName;
     }
@@ -93,7 +93,7 @@ class Customer extends AbstractModel
     /**
      * @return string|null
      */
-    public function getCustomerType(): ?string
+    public function getCustomerType()
     {
         return $this->customerType;
     }
@@ -101,7 +101,7 @@ class Customer extends AbstractModel
     /**
      * @param string|null $customerType
      */
-    public function setCustomerType(?string $customerType): void
+    public function setCustomerType($customerType)
     {
         $this->customerType = $customerType;
     }
@@ -109,7 +109,7 @@ class Customer extends AbstractModel
     /**
      * @return string|null
      */
-    public function getOrganizationVatId(): ?string
+    public function getOrganizationVatId()
     {
         return $this->organizationVatId;
     }
@@ -117,7 +117,7 @@ class Customer extends AbstractModel
     /**
      * @param string|null $organizationVatId
      */
-    public function setOrganizationVatId(?string $organizationVatId): void
+    public function setOrganizationVatId($organizationVatId)
     {
         $this->organizationVatId = $organizationVatId;
     }
