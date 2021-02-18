@@ -15,9 +15,14 @@ class ThreeDsAuthenticationStatus
     const AUTHENTICATION_SUCCESSFUL = 'Y';
 
     /**
-     * N = not authenticated; transaction denied
+     * A = authentication attempted; not authenticated, but a proof of attempted authentication is provided
      */
-    const AUTHENTICATION_DENIED = 'N';
+    const AUTHENTICATION_ATTEMPTED = 'A';
+
+    /**
+     * C = challenge required; additional SCA authentication is required
+     */
+    const AUTHENTICATION_CHALLENGE_REQUIRED = 'C';
 
     /**
      * U = authentication could not be performed; technical or other problem
@@ -25,12 +30,12 @@ class ThreeDsAuthenticationStatus
     const AUTHENTICATION_FAILED = 'U';
 
     /**
-     * A = attempts processing performed; not attempted
-     */
-    const AUTHENTICATION_ATTEMPTED = 'A';
-
-    /**
      * R = authentication rejected; issuer is rejecting
      */
     const AUTHENTICATION_REJECTED = 'R';
+
+    /**
+     * N = not authenticated; transaction denied
+     */
+    const AUTHENTICATION_DENIED = 'N';
 }
