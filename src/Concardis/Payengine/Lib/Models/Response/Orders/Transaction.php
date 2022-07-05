@@ -91,7 +91,12 @@ class Transaction extends AbstractResponseModel
      * @var string
      */
     private $merchantMessage;
-
+    
+    /**
+     * @var string|null
+     */
+    private $customerMessage;
+    
     /**
      * @return string
      */
@@ -331,4 +336,20 @@ class Transaction extends AbstractResponseModel
     {
         $this->merchantMessage = $merchantMessage;
     }
+    
+    /**
+     * @return string|null
+     */
+    public function getCustomerMessage(): ?string
+    {
+        return $this->customerMessage;
+    }
+
+    /**
+     * @param string|null $customerMessage
+     */
+    public function setCustomerMessage(?string $customerMessage): void
+    {
+        $this->customerMessage = $customerMessage;
+    }    
 }
