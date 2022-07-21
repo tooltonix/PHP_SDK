@@ -82,7 +82,7 @@ class Connection implements ConnectionInterface
     {
         $this->setDefaultHeader();
         $resourceEndpoint = $this->getEndpoint() . $path;
-        $payload = json_encode($payload);
+        $payload = json_encode((object) $payload);
         $this->curl->post($resourceEndpoint, $payload);
 
         if(!$this->curl->isSuccess()) {
