@@ -13,4 +13,5 @@ class Products
     const RATEPAY_INSTALLMENT = "ratepay-installment";
     const SEPA = "sepa";
     const SOFORT = "sofort";
+    const APPLE_PAY = "applepay";
 }
